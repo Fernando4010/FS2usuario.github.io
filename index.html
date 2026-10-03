@@ -154,6 +154,67 @@
             padding: 20px;
             color: #aaa;
         }
+        /* FILMES EM DESTAQUE */
+.filmes-destaque {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.filmes-destaque h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.filmes-destaque > p {
+    color: #bfc5d6;
+    margin-bottom: 20px;
+}
+
+.filmes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.filme-card {
+    background: #050d33;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+.filme-card video {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 9px;
+    background: #000;
+}
+
+.filme-card h3 {
+    font-size: 15px;
+    margin: 10px 5px 5px;
+    color: #ffffff;
+}
+
+@media (max-width: 800px) {
+    .filmes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .filmes-grid {
+        gap: 10px;
+    }
+
+    .filme-card h3 {
+        font-size: 13px;
+    }
+}
     </style>
 </head>
 <body>
@@ -182,7 +243,44 @@
             Seu navegador não suporta vídeo.
         </video>
     </section>
+<!-- FILMES EM DESTAQUE -->
+<section class="filmes-destaque">
+    <h2>🎬 Filmes em Destaque</h2>
+    <p>Confira alguns dos nossos destaques.</p>
 
+    <div class="filmes-grid">
+
+        <div class="filme-card">
+            <video controls muted playsinline preload="metadata">
+                <source src="VID-20260829-WA0120.mp4" type="video/mp4">
+            </video>
+            <h3>🎬 Destaque 1</h3>
+        </div>
+
+        <div class="filme-card">
+            <video controls muted playsinline preload="metadata">
+                <source src="VID-20260828-WA0054.mp4" type="video/mp4">
+            </video>
+            <h3>🎬 Destaque 2</h3>
+        </div>
+
+        <div class="filme-card">
+            <video controls muted playsinline preload="metadata">
+                <source src="VID-20260826-WA0011.mp4" type="video/mp4">
+            </video>
+            <h3>🎬 Destaque 3</h3>
+        </div>
+
+        <div class="filme-card">
+            <video controls muted playsinline preload="metadata">
+                <source src="VID-20260814-WA0095.mp4" type="video/mp4">
+            </video>
+            <h3>🎬 Destaque 4</h3>
+        </div>
+
+    </div>
+</section>
+    
     <!-- BENEFÍCIOS -->
     <div class="benefits">
         <div class="benefit-card">
